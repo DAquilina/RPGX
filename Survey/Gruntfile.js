@@ -337,7 +337,8 @@ module.exports = function (grunt) {
             'images/{,*/}*.webp',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*',
-            'questions.json'
+            'questions.json',
+            'survey.php'
           ]
         }]
       }
