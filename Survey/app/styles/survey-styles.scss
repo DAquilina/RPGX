@@ -2,12 +2,39 @@
 // endbower
 
 //-- Variables --------------
-$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-
-$colour-beige: #AF8054;
-$colour-brown: #3F3034;
+//$colour-beige: #AF8054;
+$colour-beige: orange;
+//$colour-brown: #3F3334;
+$colour-brown: sienna;
 $colour-grey: #CCC;
 $colour-grey-dark: #333;
+$nav-image-file: url("/survey/images/nav_survey.9873f8a0.png");
+
+.survey-container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+// A few definitions apply to the chart div and fall outside the survey inheritance
+#chart_div
+{
+  float: left;
+  margin-right: -120px;
+  width: 120px;
+  height: 120px;
+}
+
+.sticky
+{
+  position: fixed;
+  top: 80px;
+}
+
+.hide {
+  display: none !important;
+}
+
+
 
 .rpgx-survey
 {
@@ -15,10 +42,27 @@ $colour-grey-dark: #333;
   * {
     box-sizing: border-box;
   }
-  
-  a.disabled,
+
+  table
+  {
+    border-collapse: separate;
+    border-spacing: 1px;
+
+    td, th
+    {
+      padding: 4px;
+    }
+  }
+
+  //-- Elements ---------------
+  a.disabled
+  {
+    opacity: 0.3;
+  }
+
   input.disabled
   {
+    opacity: 0.3;
     pointer-events: none;
   }
 
@@ -56,7 +100,6 @@ $colour-grey-dark: #333;
       border: 1px solid #999;
       display: inline-block;
       height: 14px;
-      margin-bottom: 2px;
       margin-left: -14px;
       width: 14px;
     }
@@ -69,6 +112,7 @@ $colour-grey-dark: #333;
       height: 14px;
       margin-left: -1px;
       margin-top: -1px;
+      margin-bottom: 7px;
       opacity: 0;
       width: 14px;
     }
@@ -98,16 +142,21 @@ $colour-grey-dark: #333;
 
   input[type="submit"]
   {
+    height: 140px;
+    width: 140px;
+    background: $nav-image-file no-repeat -980px 0px;
     padding: 10px 25px;
+    border: 0px;
+    cursor:pointer;
   }
 
   input[type="text"]
   {
     display: inline-block;
     margin-left: 1rem;
-    
-    -webkit-transition: width 0.5s ease;
-            transition: width 0.5s ease;
+
+    //-webkit-transition: width 0.5s ease 0.5s;
+    //transition: width 0.5s ease 0.5s;
   }
 
   label
@@ -115,19 +164,26 @@ $colour-grey-dark: #333;
     display: inline;
     margin: 0;
     vertical-align: middle;
-    
+
     &[for]
     {
       cursor: pointer;
     }
   }
 
+  p.question
+  {
+    padding-left: 8em;
+    text-indent:-8em;
+  }
+
+
   section
   {
     opacity: 1.0;
-    
+
     -webkit-transition: opacity 1s ease;
-            transition: opacity 1s ease;
+    transition: opacity 1s ease;
   }
 
   textarea
@@ -142,11 +198,8 @@ $colour-grey-dark: #333;
     display: inline-block;
   }
 
+
   //-- Classes ----------------
-  .hide {
-    display: none !important;
-  }
-  
   .invisible-question
   {
     border: none !important;
@@ -157,29 +210,32 @@ $colour-grey-dark: #333;
 
   .nav
   {
-    background-color: $colour-brown;
+    //background-color: $colour-brown;
     cursor: pointer;
     display: inline-block;
     margin: 0 5px;
-    
-    -webkit-transition: background-color 0.25s ease;
-            transition: background-color 0.25s ease;
-    
-    -webkit-transition: width 0.5s ease;
-            transition: width 0.5s ease;
-    
+
+    //-webkit-transition: background-color 0.25s ease;
+    //transition: background-color 0.25s ease;
+
+    //-webkit-transition: width 0.5s ease;
+    //transition: width 0.5s ease;
+
+    &.current,
     &:active,
-    &:focus,
-    &:hover
+    //&:focus,
+    .no-touch &:hover
     {
+      opacity: 1 !important;
       background-color: $colour-beige;
     }
-    
+
     &.disabled
     {
-      background-color: $colour-grey;
+      //background-color: $colour-grey;
+      opacity: 0.3;
     }
-    
+
     &.shrunk
     {
       margin: 0 -2.5px !important;
@@ -189,61 +245,73 @@ $colour-grey-dark: #333;
 
   .nav-next
   {
-    background-color: transparent !important;
-    border-color: transparent transparent transparent $colour-brown;
-    border-style: solid;
-    border-width: 10px 0 10px 20px;
-    height: 0;
+
+    height: 70px;
+    width: 35px;
+    background: $nav-image-file no-repeat -560px 0px;
+    background-size: auto 100%;
+
+    //background-color: transparent !important;
+    //border-color: transparent transparent transparent $colour-brown;
+    //border-style: solid;
+    //border-width: 35px 0 35px 57px;
+
     margin: 0;
-    width: 0;
-    
-    -webkit-transition: border-color 0.25s ease;
-            transition: border-color 0.25s ease;
-    
+
+    //-webkit-transition: border-color 0.25s ease;
+    //transition: border-color 0.25s ease;
+
     &.disabled
     {
-      border-color: transparent transparent transparent $colour-grey;
+      display: none;
     }
-    
+
     &:active,
-    &:focus,
-    &:hover
+    //&:focus,
+    .no-touch &:hover
     {
-      border-color: transparent transparent transparent $colour-beige;
+      background-color: $colour-beige;
+      //border-color: transparent transparent transparent $colour-beige;
     }
   }
 
   .nav-previous
   {
-    background-color: transparent !important;
-    border-color: transparent $colour-brown transparent transparent;
-    border-style: solid;
-    border-width: 10px 20px 10px 0;
-    height: 0;
+    //background-color: transparent !important;
+    //border-color: transparent $colour-brown transparent transparent;
+    //border-style: solid;
+    //border-width: 35px 57px 35px 0;
+    height: 70px;
+    width: 35px;
+    background: $nav-image-file no-repeat -595px 0px;
+    background-size: auto 100%;
     margin: 0;
-    width: 0;
-    
-    -webkit-transition: border-color 0.25s ease;
-            transition: border-color 0.25s ease;
-    
+
+    //-webkit-transition: border-color 0.25s ease;
+    //transition: border-color 0.25s ease;
+
     &.disabled
     {
-      border-color: transparent $colour-grey transparent transparent;
+      display: none;
     }
-    
+
     &:active,
-    &:focus,
-    &:hover
+    //&:focus,
+    .no-touch &:hover
     {
-      border-color: transparent $colour-beige transparent transparent;
+      background-color: $colour-beige;
+      //border-color: transparent $colour-beige transparent transparent;
     }
   }
 
   .nav-targeted
   {
-    height: 20px;
-    width: 50px;
     border: 0;
+    height: 70px;
+    width: 70px;
+    background-color: transparent;
+    background-image: $nav-image-file;
+    background-size: auto 100%;
   }
 
   @media (max-width: 700px)
@@ -259,6 +327,11 @@ $colour-grey-dark: #333;
     text-align: left;
   }
 
+  .question
+  {
+    text-align: left;
+  }
+
   .question-wrapper
   {
     border: 1px solid $colour-grey;
@@ -268,10 +341,10 @@ $colour-grey-dark: #333;
     padding: 1rem;
     text-align: center;
     width: 80%;
-    
+
     -webkit-transition: max-height 0.5s ease;
-            transition: max-height 0.5s ease;
-    
+    transition: max-height 0.5s ease;
+
     .option
     {
       margin: 0.25rem auto;
@@ -285,12 +358,18 @@ $colour-grey-dark: #333;
     .question-wrapper
     {
       width: 100%;
-      
+
       .option
       {
         width: 95%;
       }
     }
+  }
+
+  .subtitle
+  {
+    color: grey;
+    font-size: .7em;
   }
 
   .section-hide
@@ -303,17 +382,24 @@ $colour-grey-dark: #333;
     border: none;
     padding: 2px 0;
     width: 0;
-    
+
     &.active
     {
       border: 1px solid $colour-grey-dark;
       padding: 1px 5px;
-      width: 150px;
+      width: 400px;
     }
+  }
+
+  .survey-container
+  {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
   }
 
   .visible-question
   {
-    max-height: 500px;
+    max-height: 800px;
   }
 }

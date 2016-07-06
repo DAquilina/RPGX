@@ -1,9 +1,16 @@
 {
+  "surveyInfo":
+    {
+      "name": "surveyInfo",
+      "id": "1",
+      "navImages": "survey/images/nav_survey.9873f8a0.png",
+      "navImageSize": "140"
+    },
   "sections":
   [
     {
-      "name": "index",
-      "title": "Index",
+      "name": "setup",
+      "title": "Setup",
       "code": "I",
       "enabled": true,
       "questions":
@@ -61,6 +68,27 @@
               "disables": []
             }
           ]
+        },
+        {
+          "questionText": "I am willing to be contacted later if there are any questions about my responses.",
+          "visible": true,
+          "options": 
+          [
+            {
+              "type": "exclusive",
+              "value": "Yes",
+              "specify": false,
+              "enables": [],
+              "disables": []
+            },
+            {
+              "type": "exclusive",
+              "value": "No",
+              "specify": false,
+              "enables": [],
+              "disables": []
+            }
+          ]
         }
       ]
     },
@@ -106,7 +134,7 @@
             },
             {
               "type": "non-exclusive",
-              "value": "Link from Google+",
+              "value": "Link from Google+ (the social media site, not search)",
               "specify": false,
               "enables": [],
               "disables": []
@@ -120,7 +148,7 @@
             },
             {
               "type": "non-exclusive",
-              "value": "Web search",
+              "value": "Web search (Google, Bing, Yahoo, ...)",
               "specify": false,
               "enables": [],
               "disables": []
@@ -365,7 +393,7 @@
             },
             {
               "type": "non-exclusive",
-              "value": "New PLayer Solo Games",
+              "value": "New Player Solo Games",
               "specify": false,
               "enables": [],
               "disables": []
@@ -421,7 +449,7 @@
             },
             {
               "type": "non-exclusive",
-              "value": "New PLayer Solo Games",
+              "value": "New Player Solo Games",
               "specify": false,
               "enables": [],
               "disables": []
@@ -575,7 +603,21 @@
             },
             {
               "type": "non-exclusive",
+              "value": "Direct invitation by GM(s)",
+              "specify": false,
+              "enables": [],
+              "disables": []
+            },
+            {
+              "type": "non-exclusive",
               "value": "With friends from off-site",
+              "specify": false,
+              "enables": [],
+              "disables": []
+            },
+            {
+              "type": "non-exclusive",
+              "value": "With friends from on-site",
               "specify": false,
               "enables": [],
               "disables": []
@@ -715,7 +757,7 @@
           ]
         },
         {
-          "questionText": "How satisfied are you with our mobile GUI?",
+          "questionText": "How satisfied are you with our mobile style/interface (CS only)?",
           "visible": true,
           "options":
           [
@@ -927,21 +969,28 @@
           [
             {
               "type": "exclusive",
-              "value": "Home page",
+              "value": "Home page (https://www.rpgcrossing.com/cmps_index.php)",
               "specify": false,
               "enables": [],
               "disables": []
             },
             {
               "type": "exclusive",
-              "value": "Game page",
+              "value": "Game page (one or more of your game forums)",
               "specify": false,
               "enables": [],
               "disables": []
             },
             {
               "type": "exclusive",
-              "value": "My account page",
+              "value": "My account page (https://www.rpgcrossing.com/usercp.php)",
+              "specify": false,
+              "enables": [],
+              "disables": []
+            },
+            {
+              "type": "exclusive",
+              "value": "Forums page (https://www.rpgcrossing.com/index.php)",
               "specify": false,
               "enables": [],
               "disables": []
@@ -975,7 +1024,7 @@
       "questions":
       [
         {
-          "questionText": "If you have a monthly subscription, why do you have a monthly subscription instead of a yearly subcription?",
+          "questionText": "If you have or had a monthly subscription, why a monthly subscription instead of a yearly subcription?",
           "visible": true,
           "options":
           [
@@ -985,7 +1034,7 @@
           ]
         },
         {
-          "questionText": "What do you like most about being a CS (select all that apply)?",
+          "questionText": "What do you / did you like most about being a CS (select all that apply)?",
           "visible": true,
           "options":
           [
@@ -998,7 +1047,7 @@
             },
             {
               "type": "non-exclusive",
-              "value": "Mobile GUI",
+              "value": "Mobile style/interface",
               "specify": false,
               "enables": [],
               "disables": []
@@ -1069,7 +1118,7 @@
           ]
         },
         {
-          "questionText": "Do you use the mobile GUI?",
+          "questionText": "Do you / did you use the mobile style/interface?",
           "visible": true,
           "options":
           [
@@ -1139,7 +1188,7 @@
           ]
         },
         {
-          "questionText": "What would most improve your experience as a CS?",
+          "questionText": "What would most improve or have improved your experience as a CS?",
           "visible": true,
           "options":
           [
@@ -1207,7 +1256,7 @@
           ]
         },
         {
-          "questionText": "As a GM, how satisfied are you with our mobile GUI?",
+          "questionText": "As a GM, how satisfied are you with our mobile style/interface (CS only)?",
           "visible": true,
           "options":
           [
@@ -1514,7 +1563,7 @@
             },
             {
               "type": "non-exclusive",
-              "value": "Mobile GUI",
+              "value": "Mobile style/interface",
               "specify": false,
               "enables": [],
               "disables": []

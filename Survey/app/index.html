@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
@@ -8,7 +9,6 @@
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -16,7 +16,7 @@
     <!-- endbuild -->
     
     <!-- build:css(.tmp) styles/survey-styles.css -->
-    <link rel="stylesheet" href="styles/survey-styles.css">
+    <!-- <link rel="stylesheet" href="styles/survey-styles.css"> -->
     <!-- endbuild -->
   </head>
   <body>
@@ -27,23 +27,41 @@
       
       <div class="survey-body">
         <form>
+          <!-- <link rel="stylesheet" href="styles/survey-styles.css"> -->
+          
           <section id="section-preface">
-            <h1>RPG Crossing Survey Platform</h1>
+            <h1>Welcome To The First Ever RPG Crossing Member Survey!</h1>
             
             <div class="preface">
               <p>
-                RPG Crossing is a play-by-post gaming forum which hosts a number of different
-                systems. [TODO: Expand me!]
+                Thank you for taking a break from your games at RPG Crossing to give us a hand. We
+                promise not to take too much of your time.
               </p>
               
               <p>
-                Answering these questions is very useful to us. [TODO: Expand me!]
+                This survey is intended to help us better understand who is using the site and how
+                we can best make everyone's time here as enjoyable as possible.
+                None of the questions in this survey is required. If you would prefer not to
+                answer, feel free to move on. Answers will be saved and loaded for you if you return,
+                in case you would like to review or revise your entries.
               </p>
-              
+
               <p>
-                None of the questions in this survey are required. If you would prefer not to
-                answer, feel free to move on. [TODO: Expand me!]
+                The survey should only take around 5 to 10 minutes, and anyone who completes at least 75% 
+                of the survey by July 31, 2016 will have <strong>a free month of CS</strong>
+                added to their current CS membership within two days.*
+               
               </p>
+
+              <p>
+                Just click the right arrow below to get started.
+              </p>
+              <p style="font-size:10px">
+                *Members who do not currently have a Community Supporter membership but who 
+                <a href="https://www.rpgcrossing.com/payments.php">purchase one</a>
+                within the next 6 months will likewise have this bonus month added automatically.
+                </p>
+
             </div>
           </section>
           
@@ -51,6 +69,7 @@
           
           <section id="section-submit" class="hide section-hide">
             <h2>Submit your responses</h2>
+            <h3 id="percentComplete"></h3>
             
             <div class="closing">
               <p>
@@ -64,11 +83,13 @@
               <p>
               
               <div class="center">
-                <input type="submit" />
+                <input type="submit" value=""/>
+                CLICK TO SUBMIT!
               </div>
             </div>
           </section>
         </form>
+        <div id="successMessage"></div>
       </div>
       
       <footer>
@@ -81,7 +102,7 @@
         </nav>
       </footer>
     </div>
-
+    
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
