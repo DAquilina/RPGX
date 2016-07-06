@@ -337,8 +337,7 @@ module.exports = function (grunt) {
             'images/{,*/}*.webp',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*',
-            'questions.json',
-            'survey.php'
+            'questions.json'
           ]
         }]
       }
@@ -378,7 +377,6 @@ module.exports = function (grunt) {
       ]
     }
   });
-
 
   grunt.registerTask('serve', 'start the server and preview your app', function (target) {
 
