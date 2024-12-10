@@ -57,7 +57,7 @@ scripts folder. To install a new bower package, use:
 `--save` saves the dependency to bower.json so it can be included the next time dependencies are
 fetched.
 
-##Development (Original)
+## Development (Original)
 
 Development can be done using the grunt server, which includes livereload:
 
@@ -73,7 +73,7 @@ complex, additional branches will be created on a per-feature basis to prevent c
 development on a feature is complete, submit a pull request to have the updates propagated to the
 master branch after peer-review.
 
-##Deployment
+## Deployment
 
 To create a deployment build, use:
 
