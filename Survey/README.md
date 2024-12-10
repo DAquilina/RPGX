@@ -1,4 +1,4 @@
-#RPGX Survey Platform
+# RPGX Survey Platform
 
 This platform was created to help the RPGX site collect information about users so that the user
 experience can be overhauled. Key features include dynamic enabling/disabling of both sections
@@ -16,7 +16,7 @@ server, but input can be loaded remotely in the future given that the target JSO
 project's [specifications](JSONSpecs.txt).
 
 
-##Getting Started
+## Getting Started
 
 After you've pulled/cloned the project to your local environment, you need to get the updated set
 of dependencies.
@@ -87,7 +87,7 @@ appropriate analog directories within `/dist`. If this project were to be placed
 server, it would be sufficient to point the host at this directory, however the contents can be
 extracted and used elsewhere without issue, as after building the project is self-contained.
 
-##Development (templated)
+## Development (templated)
 
 Since the index file is no longer standalone, the grunt server cannot be used to test and compile
 in the local environment. Development of survey functionality whould be done on the clean
